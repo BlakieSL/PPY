@@ -7,7 +7,7 @@ Once upon a time in a faraway lanD, there lived a King and QueEn who ruled over 
 """
 
 def test_extract_words_with_inner_capital():
-    expected_result = ['QueEn', 'lanD', 'peaCe', 'seCret', 'theIr', 'thEm']
+    expected_result = ['QueEn', 'belOved', 'harMony', 'lanD', 'peaCe', 'seCret', 'thEm', 'theIr']
     result = extract_words_with_inner_capital(sample_text)
     assert result == expected_result
 

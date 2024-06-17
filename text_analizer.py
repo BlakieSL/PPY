@@ -1,18 +1,14 @@
 import re
 
-
 def extract_words_with_inner_capital(text):
-    return sorted(re.findall(r'\b\w*[A-Z]\w*\b', text))
-
+    return sorted(re.findall(r'\b\w*[a-z][A-Z]\w*\b', text))
 
 def split_paragraphs(filename):
     with open(filename, 'r', encoding='utf-8') as file:
         return file.read().split('\n\n')
 
-
 def correct_word(word):
     return word[0] + word[1:].lower()
-
 
 def correct_text(filename):
     with open(filename, 'r', encoding='utf-8') as file:
@@ -28,7 +24,6 @@ def correct_text(filename):
         output_file.write(corrected_text)
 
     return corrected_text
-
 
 # Example usage:
 if __name__ == "__main__":
